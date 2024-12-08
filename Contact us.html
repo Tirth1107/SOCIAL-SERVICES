@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactStyles.css">
+</head>
+<body>
+
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/mrbgveeg" method="POST" id="contact-form">
+      <!-- Name Field -->
+      <div class="input-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+
+      <!-- Email Field -->
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      </div>
+
+      <!-- Message Field -->
+      <div class="input-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Send Message</button>
+
+      <!-- Success Message -->
+      <div id="success-message" class="hidden">
+        <p>Thank you! Your message has been sent successfully.</p>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error-message" class="hidden">
+        <p>Sorry, something went wrong. Please try again later.</p>
+      </div>
+    </form>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <h2>Contact Details</h2>
+      <p><strong>Email:</strong> <a href="mailto:upsocialhelp@gmail.com">upsocialhelp@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+917016565502">7016565502</a></p>
+    </div>
+  </div>
+
+  <script src="contactScript.js"></script>
+</body>
+</html>

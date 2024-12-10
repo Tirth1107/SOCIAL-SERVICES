@@ -6,8 +6,93 @@
   <meta name="description" content="UPSOCIAL - Your Social Media Solution. Offering video editing, website designing, and social media management.">
   <title>HOME</title>
   <link rel="stylesheet" href="mainfile.css"> <!-- Changed CSS file name -->
+
+  <style>
+    /* Add this CSS to the main CSS file or within the <style> tag */
+
+    /* Loader Styles */
+    .loader {
+      --ANIMATION-DELAY-MULTIPLIER: 70ms;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .loader span {
+      padding: 0;
+      margin: 0;
+      letter-spacing: -5rem;
+      animation-delay: 0s;
+      transform: translateY(4rem);
+      animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .loader .l {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+    }
+    .loader .o {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
+    }
+    .loader .a {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
+    }
+    .loader .d {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
+    }
+    .loader .ispan {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
+    }
+    .loader .n {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
+    }
+    .loader .g {
+      animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 6);
+    }
+
+    .letter {
+      width: fit-content;
+      height: 3rem;
+    }
+
+    @keyframes hideAndSeek {
+      0% {
+        transform: translateY(4rem);
+      }
+      100% {
+        transform: translateY(0rem);
+      }
+    }
+
+    /* Hide the loader once the page is fully loaded */
+    .hide-loader {
+      display: none;
+    }
+  </style>
+
 </head>
 <body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <span class="l">L</span>
+    <span class="o">O</span>
+    <span class="a">A</span>
+    <span class="d">D</span>
+    <span class="ispan">I</span>
+    <span class="n">N</span>
+    <span class="g">G</span>
+  </div>
 
   <!-- Navigation Bar -->
   <header>
@@ -24,7 +109,7 @@
             <a href="Contact us.html" style="text-decoration: none;"><button class="button"><p class="p">Contact Us</p></button></a>
           </li>
           <li class="li">
-            <button class="button"><p class="p">Download</p></button>
+            <a href="download.html" style="text-decoration: none;"><button class="button"><p class="p">Download</p></button></a>
           </li>
         </ul>
         
@@ -34,10 +119,8 @@
   <!-- Welcome Section -->
   <section id="home" class="welcome-section">
     <div class="welcome-content">
-        
       <h2>Welcome to UPSOCIAL</h2>
       <p>Your one-stop solution for Video Editing, Website Designing, and Social Media Management.</p>
-      
     </div>
   </section>
 
@@ -68,6 +151,18 @@
     </div>
   </footer>
 
-  <script src="mainfile.js"></script> <!-- Changed JS file name -->
+  <script>
+    // JavaScript to hide loader after the page has loaded
+    window.addEventListener('load', function() {
+      // Hide the loader after the page is fully loaded
+      document.getElementById('loader').classList.add('hide-loader');
+    });
+    
+    // Optional: You can show the loader when leaving a page (e.g., when navigating to another page)
+    window.addEventListener('beforeunload', function() {
+      document.getElementById('loader').classList.remove('hide-loader');
+    });
+  </script>
+
 </body>
 </html>

@@ -25,4 +25,5 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     .catch(error => {
       errorMessage.classList.remove('hidden');
     });
-  });  
+  });
+  

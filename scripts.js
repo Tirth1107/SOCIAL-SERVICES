@@ -28,3 +28,24 @@ window.addEventListener('scroll', fadeInOnScroll);
 document.addEventListener('DOMContentLoaded', () => {
   fadeInOnScroll();
 });
+// script.js
+
+// Function to show the loader
+function showLoader() {
+    document.getElementById('loader').style.display = 'flex';
+}
+
+// Function to hide the loader
+function hideLoader() {
+    document.getElementById('loader').style.display = 'none';
+}
+
+// Show loader when page starts loading
+window.addEventListener('beforeunload', function () {
+    showLoader();
+});
+
+// Listen for the page load event to hide the loader
+window.addEventListener('load', function () {
+    hideLoader();
+});

@@ -1,126 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Download free content - Games, Courses, and Editing Software.">
-  <title>Free Downloads - UPSOCIAL</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-  <style>
-    /* Basic reset and styling */
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: white;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  
+    <head>
+      <title>DOWNLOAD</title>
+      <style>
 
-    /* Centering the content */
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  margin-left: 45%;
+}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      animation: fadeIn 2s ease-in-out 0.5s;
-    }
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
 
-    .download-cards {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-      animation: fadeIn 2s ease-in-out 1s;
-    }
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
 
-    .download-card {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 30px;
-      border-radius: 10px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
 
-    .download-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
 
-    .download-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
+      </style>
+    </head>
 
-    .download-card p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    .download-btn {
-      padding: 10px 20px;
-      background: #2575fc;
-      color: white;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .download-btn:hover {
-      background: #6a11cb;
-    }
-
-    /* Fade In Animation */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>Free Content Downloads</h1>
-    <p>Explore and download some of our free content for your entertainment and learning!</p>
-
-    <div class="download-cards">
-      <!-- Download Card 1: Free Editing Software -->
-      <div class="download-card">
-        <h3>Free Editing Software</h3>
-        <p>Get the best free video and photo editing software for your creative projects.</p>
-        <a href="free editing software.html" class="download-btn" >Download Software</a>
-      </div>
-
-      <!-- Download Card 2: Free Games -->
-      <div class="download-card">
-        <h3>Free Games</h3>
-        <p>Enjoy amazing free games to unwind and have fun!</p>
-        <a href="free games.html" class="download-btn" >Download Games</a>
-      </div>
-    </div>
-  </div>
+        <body>
+              <h1 style="text-align: center;">WE ARE NOW OFFICIAL ON GAMEOCIAL</h1>
+              <a style="text-decoration: none" href="../FREE GAMES WEBSITE/Home Page.html"><button><span>GAMEOCIAL</span></button></a>
+        </body>
 
 </body>
 </html>

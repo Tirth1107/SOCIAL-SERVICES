@@ -6,28 +6,137 @@
   <meta name="description" content="UPSOCIAL - Your Social Media Solution. Offering video editing, website designing, and social media management.">
   <title>HOME</title>
   <link rel="stylesheet" href="mainfile.css"> <!-- Changed CSS file name -->
-</head>
-<body>3
+  <style>
+    /* Mobile-first styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    header {
+      background: #183153;
+      color: white;
+      padding: 1rem;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .li {
+      text-align: center;
+    }
+
+    .button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      background: #0056b3;
+    }
+
+    .welcome-section {
+      padding: 2rem 1rem;
+      text-align: center;
+      background:  #b34d00;
+    }
+
+    .services-section {
+      padding: 2rem 1rem;
+    }
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .service-item {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .service-item:hover {
+      background: #f0f8ff;
+    }
+
+    footer {
+      text-align: center;
+      background: #183153;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    /* Larger screens */
+    @media (min-width: 768px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .ul {
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      .services-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .service-item {
+        flex: 1 1 calc(33.333% - 2rem);
+      }
+    }
+  </style>
+</head>
+<body>
   <!-- Navigation Bar -->
   <header>
     <nav>
       <div class="logo">
         <h1>UPSOCIAL</h1>
       </div>
-    
-        <ul class="ul">
-          <li class="li">
-          <a href="MAIN FILE.html" style="text-decoration: none;"><button class="button"><p class="p">Home</p></button></a>
-          </li>
-          <li class="li">
-            <a href="Contact us.html" style="text-decoration: none;"><button class="button"><p class="p">Contact Us</p></button></a>
-          </li>
-          <li class="li">
-            <a href="download.html" style="text-decoration: none;"><button class="button"><p class="p">Download</p></button></a>
-          </li>
-        </ul>
-        
+      <ul class="ul">
+        <li class="li">
+          <a href="MAIN FILE.html" style="text-decoration: none;"><button class="button">Home</button></a>
+        </li>
+        <li class="li">
+          <a href="Contact us.html" style="text-decoration: none;"><button class="button">Contact Us</button></a>
+        </li>
+        <li class="li">
+          <a href="download.html" style="text-decoration: none;"><button class="button">Download</button></a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -65,19 +174,5 @@
       <p>Email: upsocialhelp@gmail.com</p>
     </div>
   </footer>
-
-  <script>
-    // JavaScript to hide loader after the page has loaded
-    window.addEventListener('load', function() {
-      // Hide the loader after the page is fully loaded
-      document.getElementById('loader').classList.add('hide-loader');
-    });
-    
-    // Optional: You can show the loader when leaving a page (e.g., when navigating to another page)
-    window.addEventListener('beforeunload', function() {
-      document.getElementById('loader').classList.remove('hide-loader');
-    });
-  </script>
-
 </body>
 </html>
